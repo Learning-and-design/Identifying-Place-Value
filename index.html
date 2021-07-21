@@ -47,7 +47,9 @@
             gameInstance.SendMessage("GetData", "ReceiveData", data);
         }
         function handleEvent(message) {
+		
             messageData = JSON.stringify(message.data);
+			alert(messageData);
         }
 
         document.addEventListener("message", handleEvent);
