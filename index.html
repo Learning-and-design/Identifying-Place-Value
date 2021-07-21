@@ -49,7 +49,7 @@
         function handleEvent(message) {
 		
             messageData = JSON.stringify(message.data);
-			alert(messageData);
+			alert("data listener");
         }
 
         document.addEventListener("message", handleEvent);
