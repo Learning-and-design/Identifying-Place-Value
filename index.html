@@ -14,13 +14,12 @@
         frameworkUrl: "Build/PlaceValue.framework.js",
         codeUrl: "Build/PlaceValue.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Kreedo",
+        companyName: "Tresreis",
         productName: "Identifing_the_place_value",
         productVersion: "0.1",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
-
         var script = document.createElement("script");
         script.src = loaderUrl;
         script.onload = () => {
@@ -47,9 +46,9 @@
             gameInstance.SendMessage("GetData", "ReceiveData", data);
         }
         function handleEvent(message) {
-		
+
             messageData = JSON.stringify(message.data);
-			alert("data listener");
+            alert("Got Data=" + messageData);
         }
 
         document.addEventListener("message", handleEvent);
